@@ -1,3 +1,20 @@
+<?php
+$num_password = $_GET['number'] ?? '';
+
+function generate_password($user_number)
+{
+    $arr_password = str_split("abcdefghilmnopqrstuvzxkjywABCDEFGHILMNOPQRSTUVZXKJWY1234567890*#@%&£_-!?");
+    shuffle($arr_password);
+    $generated_password = '';
+    foreach ($arr_password as $pass) {
+        if (strlen($generated_password) < $user_number) {
+            $generated_password .= $pass;
+        }
+    }
+    return $generated_password;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +30,24 @@
 </head>
 
 <body>
+    <div class="container">
+        <h1 class="text-center mb-2">Strong Password Generator</h1>
+        <h2 class="text-center mb-3">Genera una password sicura</h2>
 
+        <form action="" method="get">
+            <div class="row mb-3">
+                <label for="number" class="col-sm-2 col-form-label">Lunghezza della password</label>
+                <div class="col-sm-10 mb-3">
+                    <input type="number" class="form-control" id="number" name="number">
+                </div>
+
+                <h2>La tua nuova password è: <?= generate_password($num_password) ?> </h2>
+            </div>
+            <button type="submit" class="btn btn-primary">Genera</button>
+            <a class="btn btn-danger text-decoration-none" href="http://localhost:8888/06-Giugno/45-08Giu/php-strong-password-generator/">Reset</a>
+        </form>
+
+    </div>
 
 </body>
 
