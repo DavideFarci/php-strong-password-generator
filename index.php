@@ -26,7 +26,31 @@
                 <div class="col-sm-10 mb-3">
                     <input type="number" class="form-control" id="number" name="number">
                 </div>
-                ciao
+                <div class="d-flex">
+                    <span>Scegli cosa deve includere la tua password:</span>
+                    <div style="padding-left: 50px;">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="lettere" name="chars[]" value="lettere">
+                            <label class="form-check-label" for="lettere">
+                                Lettere
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="numeri" name="chars[]" value="numeri">
+                            <label class="form-check-label" for="numeri">
+                                Numeri
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="simboli" name="chars[]" value="simboli">
+                            <label class="form-check-label" for="simboli">
+                                Simboli
+                            </label>
+                        </div>
+                    </div>
+                </div>
 
                 <h2>La tua nuova password è: <?= generate_password($num_password) ?> </h2>
             </div>
