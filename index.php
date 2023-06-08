@@ -26,6 +26,7 @@
                 <div class="col-sm-10 mb-3">
                     <input type="number" class="form-control" id="number" name="number">
                 </div>
+                ciao
 
                 <h2>La tua nuova password è: <?= generate_password($num_password) ?> </h2>
             </div>
