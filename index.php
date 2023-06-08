@@ -31,7 +31,7 @@
                 <h2>La tua nuova password è: <?= generate_password($num_password) ?> </h2>
             </div>
             <button type="submit" class="btn btn-primary">Genera</button>
-            <a class="btn btn-danger text-decoration-none" href="http://localhost:8888/06-Giugno/45-08Giu/php-strong-password-generator/">Reset</a>
+            <a class="btn btn-danger text-decoration-none" href="http://localhost:8080/06-Giugno/45-08Giu/php-strong-password-generator/">Reset</a>
         </form>
 
     </div>
