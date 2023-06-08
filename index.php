@@ -30,21 +30,21 @@
                     <span>Scegli cosa deve includere la tua password:</span>
                     <div style="padding-left: 50px;">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="lettere" name="chars[]" value="lettere">
+                            <input class="form-check-input" type="checkbox" id="lettere" name="letters">
                             <label class="form-check-label" for="lettere">
                                 Lettere
                             </label>
                         </div>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="numeri" name="chars[]" value="numeri">
+                            <input class="form-check-input" type="checkbox" id="numeri" name="numbers">
                             <label class="form-check-label" for="numeri">
                                 Numeri
                             </label>
                         </div>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="simboli" name="chars[]" value="simboli">
+                            <input class="form-check-input" type="checkbox" id="simboli" name="special">
                             <label class="form-check-label" for="simboli">
                                 Simboli
                             </label>
@@ -52,9 +52,9 @@
                     </div>
                 </div>
 
-                <h2>La tua nuova password è: <?= generate_password($num_password) ?> </h2>
+                <h2>La tua nuova password è: <?= $arr_password ?> </h2>
             </div>
-            <button type="submit" class="btn btn-primary">Genera</button>
+            <button type="submit" class="btn btn-primary" name="button">Genera</button>
             <a class="btn btn-danger text-decoration-none" href="http://localhost:8080/06-Giugno/45-08Giu/php-strong-password-generator/">Reset</a>
         </form>
 
